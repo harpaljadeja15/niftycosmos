@@ -25,8 +25,8 @@ NiftyCosmos currently is a No-Code NFT Marketplace. Soon we will allow permissio
 
 We have developed two smart-contracts using the Solidity language which were deployed to the Evmos testnet:
 
--   Creators Registry contract: 0xb5b173F237B9f40115e487A1d1D28b7750693d82
--   NFT marketplace contract: 0xe80b8207aBb7cA8d3efb456AeEbb0d0A9ecA52ac
+-   Creators Registry contract: 0xC24A23C4A48f1C99925f67E2719E5417BB51f2d1
+-   NFT marketplace contract: 0xAa48f75D1eBC35957C636F85dF2FA35557CF6219
 
 _Features Implemented_
 
