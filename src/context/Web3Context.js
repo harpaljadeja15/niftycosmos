@@ -23,7 +23,6 @@ export function Web3ContextProvider({ children }) {
 	const [chainId, setChainId] = useState(null);
 
 	useEffect(() => {
-		console.log(window.ethereum);
 		if (window.ethereum !== undefined) {
 			setMetamaskInstalled(true);
 			const provider = new providers.JsonRpcProvider(
@@ -45,10 +44,10 @@ export function Web3ContextProvider({ children }) {
 	}, []);
 
 	useEffect(() => {
-		if (window.ethereum.chainId !== null) {
+		if (window.ethereum !== undefined && window.ethereum.chainId !== null) {
 			setChainId(window.ethereum.chainId);
 		}
-	}, [window.ethereum.chainId]);
+	}, [window.ethereum?.chainId]);
 
 	async function connectWallet() {
 		setConnectingAccount(true);

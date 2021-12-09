@@ -57,6 +57,7 @@ function App() {
 		connectingAccount,
 		setOngoingTx,
 		OngoingTx,
+		metamaskInstalled,
 	} = web3Context;
 
 	const creatorsContext = useContext(CreatorsContext);
@@ -107,6 +108,19 @@ function App() {
 				modalHeader="Invalid Network"
 				modalCloseButton={false}
 				modalFooterButtonText="Change Network"
+			></CustomModal>
+
+			<CustomModal
+				modalButtonOnClick={() =>
+					console.log(
+						"Install Metamask by visiting - https://metamask.io/"
+					)
+				}
+				isOpen={metamaskInstalled == false}
+				onClose={onClose}
+				modalHeader="Metamask not installed"
+				modalCloseButton={false}
+				modalFooterButtonText="Install Metamask"
 			></CustomModal>
 			<Grid
 				height="100vh"
